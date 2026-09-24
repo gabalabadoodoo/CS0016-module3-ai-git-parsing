@@ -63,8 +63,18 @@ def parse_json(path: str | Path) -> dict:
 
 def parse_yaml(path: str | Path) -> dict:
     """Return name, approved, duration_minutes, devices, and action from YAML."""
-    # TODO: use yaml.safe_load and return the normalized maintenance summary.
-    raise NotImplementedError("Complete parse_yaml")
+    with Path(path).open(encoding="utf-8") as file:
+        data = yaml.safe_load(file)
+
+    window = data["window"]
+
+    return {
+        "name": window["name"],
+        "approved": window["approved"],
+        "duration_minutes": window["duration_minutes"],
+        "devices": data["devices"],
+        "action": data["action"],
+    }
 
 
 def build_summary(xml_path: str | Path, json_path: str | Path, yaml_path: str | Path) -> dict:

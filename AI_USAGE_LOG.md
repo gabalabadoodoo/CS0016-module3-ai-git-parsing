@@ -63,10 +63,11 @@ I am completing an authorized classroom Python lab. Review the `parse_yaml` func
 AI recommendation summary:
 Codex recommended opening the YAML file as UTF-8 text and parsing it with `yaml.safe_load()`. The implementation accesses the nested `window` mapping for the name, approval status, and duration. It obtains the device list and action from the top-level mapping. PyYAML automatically converts `true` into a Python Boolean and `90` into an integer.
 
-Decision: pending validation
+Decision:
+`accepted`
 
 Validation evidence:
-Not yet validated. I will update this field after implementing the recommendation, inspecting the Git diff, and running the YAML and integration tests.
+The YAML unit test passed. I inspected the Git diff and confirmed that only `parse_yaml` changed. The returned window values, device list, and action matched my manual predictions. Integration through `build_summary` will be validated separately.
 
 ## Controlled merge-conflict line
 
