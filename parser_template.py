@@ -41,8 +41,24 @@ def parse_xml(path: str | Path) -> dict:
 
 def parse_json(path: str | Path) -> dict:
     """Return site, device_count, enabled_devices, and roles from the JSON."""
-    # TODO: use json.load and derive the requested summary values.
-    raise NotImplementedError("Complete parse_json")
+    with Path(path).open(encoding="utf-8") as file:
+        data = json.load(file)
+
+    devices = data["devices"]
+
+    return {
+        "site": data["site"],
+        "device_count": len(devices),
+        "enabled_devices": [
+            device["hostname"]
+            for device in devices
+            if device["enabled"]
+        ],
+        "roles": [
+            device["role"]
+            for device in devices
+        ],
+    }
 
 
 def parse_yaml(path: str | Path) -> dict:
