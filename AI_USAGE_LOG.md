@@ -61,13 +61,13 @@ Prompt:
 I am completing an authorized classroom Python lab. Review the `parse_yaml` function stub and the supplied fictional YAML structure. Recommend an implementation that returns exactly the keys described in the docstring. Explain nested mapping access, list and Boolean handling, returned data types, possible errors, and each PyYAML function used. Do not invent files, credentials, network calls, or test results. I will validate the recommendation using unit tests and Git diffs.
 
 AI recommendation summary:
-Codex recommended opening the YAML file as UTF-8 text and parsing it with `yaml.safe_load()`. The implementation accesses the nested `window` mapping for the name, approval status, and duration. It obtains the device list and action from the top-level mapping. PyYAML automatically converts `true` into a Python Boolean and `90` into an integer.
+Codex recommended opening the YAML file as UTF-8 text and parsing it with `yaml.safe_load()`. The implementation accesses the nested `window` mapping for the name, approval status, and duration, while reading the device list and action from the top-level mapping. For integration, Codex recommended calling each validated parser inside `build_summary` and storing the results under the `xml`, `json`, and `yaml` keys.
 
 Decision:
 `accepted`
 
-Validation evidence:
-The YAML unit test passed. I inspected the Git diff and confirmed that only `parse_yaml` changed. The returned window values, device list, and action matched my manual predictions. Integration through `build_summary` will be validated separately.
+AI recommendation summary:
+Codex recommended opening the YAML file as UTF-8 text and parsing it with `yaml.safe_load()`. The implementation accesses the nested `window` mapping for the name, approval status, and duration, while reading the device list and action from the top-level mapping. For integration, Codex recommended calling each validated parser inside `build_summary` and storing the results under the `xml`, `json`, and `yaml` keys.
 
 ## Controlled merge-conflict line
 
