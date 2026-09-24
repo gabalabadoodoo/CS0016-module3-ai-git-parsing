@@ -71,7 +71,7 @@ Codex recommended opening the YAML file as UTF-8 text and parsing it with `yaml.
 
 ## Controlled merge-conflict line
 
-Validation status: Tests passed
+Validation status: AI reviewed and tests passed.
 
 ## Final reflection
 
