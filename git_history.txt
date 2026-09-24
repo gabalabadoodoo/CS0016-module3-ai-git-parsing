@@ -1,0 +1,10 @@
+*   3c7c900 (HEAD -> main) merge: reconcile AI and test validation notes
+|\  
+| * 0925b38 (docs/ai-note) docs: record AI review status
+* | 1f87cde docs: record test validation status
+|/  
+* f06bff3 (feature/data-parsers) feat: integrate parser summary
+* 5420222 feat: implement YAML parser
+* ca69da9 feat: implement JSON parser
+* 67d39ed feat: implement XML parser
+* f7b4811 chore: add parser lab starter files

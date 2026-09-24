@@ -75,4 +75,4 @@ Validation status: AI reviewed and tests passed.
 
 ## Final reflection
 
-Describe one AI suggestion that you changed or rejected and explain the evidence that guided your decision.
+I modified the suggested terminal commands by using the Windows `py` launcher instead of `python3`. Running `py --version` confirmed Python 3.13.15, and all seven tests passed with `py -m unittest -v`. This showed that the Windows launcher used the correct interpreter for the project.
