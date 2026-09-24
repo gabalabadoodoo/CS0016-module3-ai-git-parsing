@@ -71,7 +71,7 @@ Codex recommended opening the YAML file as UTF-8 text and parsing it with `yaml.
 
 ## Controlled merge-conflict line
 
-Validation status: PENDING
+Validation status: Tests passed
 
 ## Final reflection
 
